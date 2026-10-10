@@ -216,23 +216,61 @@ B2B 买家在采购大宗工业润滑油时高度关注原料走势。本项目�
 
 ---
 
-## 第十阶段：未来优化与持续演进路线图 (Future Optimization Roadmap)
+## 第十阶段：多语言全球化矩阵与防幻觉专业摩擦学词库 (Multilingual Matrix & Tribology Dictionary)
 
-为保持全球领先竞争力，项目制定了五大后续演进目标：
+为了让全球主要工业制造国（拉美、中东、东欧、东南亚）采购商以母语顺畅审阅技术规范，全站扩展了五大核心国际语种子目录，彻底告别单调纯英语站点：
+
+1. **五大语种无后缀子目录规范**：
+   - 🇪🇸 **西班牙语 (`/es/`)**：覆盖墨西哥、智利、秘鲁、哥伦比亚注塑与矿山机械；
+   - 🇷🇺 **俄语 (`/ru/`)**：覆盖俄罗斯、白俄罗斯、中亚等重工业与极寒采矿工况；
+   - 🇸🇦 **阿拉伯语 (`/ar/`)**：支持全栈 **RTL（从右至左）排版**，覆盖阿联酋、沙特、伊拉克油气基建；
+   - 🇻🇳 **越南语 (`/vi/`)**：覆盖平阳、北宁等注塑机与数控加工产业集群；
+   - 🇮🇩 **印尼语 (`/id/`)**：覆盖雅加达、泗水塑料与橡胶工业。
+2. **挂载专业摩擦学词库防幻觉**：
+   - 严格以国际标准化词库为基准（如 Viscosidad Cinemática a 40°C、Кинематическая вязкость при 40°C、اللزوجة الحركية عند 40° مئوية）；
+   - 杜绝通用机器翻译的语义偏差，参数公差与 ASTM 测试法 100% 严谨对应；
+   - 详细多语言词库见：[`references/tribology-multilingual-dictionary.md`](references/tribology-multilingual-dictionary.md)。
+3. **导航栏优化与语言切换器 (Header Logo & Language Switcher)**：
+   - **导航栏瘦身**：去除了原 Logo 旁冗长的“FOSS LUBRICATION 泉州市福斯润滑科技有限公司”中英文文字，**仅保留纯净高清的官方 Logo 图标**，极大拓宽了导航可视空间；
+   - **多语言切换器**：在 Header 右侧显著位置植入多语言下拉切换器，带国旗图标与双字母代码，支持桌面端 Hover / 点击唤起与移动端触摸交互，各语种各页面路径 1:1 无损互跳；
+   - **国际 SEO 权威互引**：每个页面在 `<head>` 中与 `sitemap.xml` 中挂载完整的 6 语种 `hreflang` 标签，全站 70 个页面通过 4,889 个内部引用 100% 校验通过！
+
+---
+
+## 第十一阶段：外贸出海建站 Skills 协同使用全景指南 (Skills Orchestration Guide)
+
+本项目在打造 `fosslubricants.com` 过程中，完整串联并驱动了多个专业 Agent Skills。为方便在后续同类建站项目中标准化复用，提炼核心使用手册如下：
+
+| 建站阶段 | 核心调用 Skill | 触发时机与输入事实 | 输出物与产出标准 |
+| :--- | :--- | :--- | :--- |
+| **1. 事实基底与标准锁定** | `product-truth-builder`<br>`exporter-profile-skill` | **触发时机**：建站第一步。<br>**输入**：工厂成立年份、反应釜容积、年产能、ASTM/DIN 标准、留样政策。 | 严谨结构化的产品真相表、跨品牌等效替换表、批次 CoA 格式规范。 |
+| **2. 工业实景视觉生成** | `antigravity-image-gen`<br>`brand-visual-director` | **触发时机**：编写 HTML 骨架前。<br>**硬约束**：100% 中国员工面孔；上面英文 `FOSS LUBRICATION` 下面中文 `福斯润滑`。 | 10 张 16:9 实拍级纪实工业摄影图与 WebP 高度压缩资产。 |
+| **3. 架构与无后缀路由** | `b2b-foss-lubricants-builder`<br>`b2b-global-brand-site-master` | **触发时机**：编写 HTML 与 Nginx 配置。<br>**规则**：禁止使用 `.html` 后缀，全站链接、Canonical、Sitemap 统一。 | 29 核心页面拓扑、`nginx.conf` 301 强制跳转与 `try_files` 配置。 |
+| **4. 交互与动效防错** | `layout-typography-auditor` | **触发时机**：交互组件编写时。<br>**要点**：CSS Grid 单元格堆叠轮播（防抖动）、数字下潜滚动累加、侧边栏悬浮沟通卡片。 | 零布局重排的响应式交互体系、无遮挡高对比度悬浮窗口。 |
+| **5. 自动化能源研报引擎** | `automation`<br>`daily-news-automation-engine` | **触发时机**：日常定时调度。<br>**规则**：每日一篇 3000+ 字深度分析、量化推导未来 3 天价格走势。 | 自动生成无后缀文章页、自动更新新闻列表与 `sitemap.xml`。 |
+| **6. 多语言全球化矩阵** | `b2b-foss-lubricants-builder`<br>`locale-market-adapter` | **触发时机**：主站调优完成后。<br>**规则**：挂载 6 语种摩擦学词库，编译 5 大国际子目录并配置阿语 RTL 排版。 | 40 个国际子目录页面、`hreflang` 国际互引标签。 |
+| **7. 生产部署与缓存穿透** | `deploy_production.sh` | **触发时机**：更新上线时。<br>**操作**：Rsync 增量同步、`www-data` 权限复位、Nginx 重载、图片附加版本号。 | 全球 CDN 边缘节点 100% 极速加载最新实景与页面。 |
+
+> 详细协同流程、Prompt 模板与避坑指南见：[`references/b2b-skills-orchestration-guide.md`](references/b2b-skills-orchestration-guide.md)。
+
+---
+
+## 第十二阶段：未来持续演进路线图 (Future Optimization Roadmap)
+
+随着多语言国际化矩阵正式落地，下一阶段的核心演进目标聚焦在**动态数据交互与智能化获客**：
 
 ```mermaid
 flowchart LR
-    M1[多语言全球本地化<br>西语/俄语/阿语/越语/印尼语] --> M2[实时海运费与原油指数联动 API<br>在线生成 FOB/CIF 报价单与 PI]
-    M2 --> M3[3D 钢桶与包装在线定制打样器<br>WebGL 自由换色/贴牌/旋转]
-    M3 --> M4[AI 润滑专家选油与秒回 Agent<br>挂载机械手册秒级回答工况选油]
-    M4 --> M5[Cloudflare Workers 边缘计算<br>与 PWA 离线规格书工作站]
+    M1[已完成: 多语言矩阵<br>西语/俄语/阿语/越语/印尼语] --> M2[阶段二: 实时海运费与原油 API<br>在线生成 FOB/CIF 报价单与 PI]
+    M2 --> M3[阶段三: 3D 钢桶在线定制打样器<br>WebGL 自由换色/贴牌/旋转]
+    M3 --> M4[阶段四: AI 润滑专家选油与秒回 Agent<br>挂载机械手册秒级回答工况选油]
+    M4 --> M5[阶段五: Cloudflare Workers 边缘计算<br>与 PWA 离线规格书工作站]
 ```
 
-1. **多语言 AI 本地化矩阵**：部署 `/es/`、`/ru/`、`/ar/`、`/vi/`、`/id/` 无后缀路由与精准润滑油专业词库；
-2. **实时海运费与原油指数联动 API**：对接 Freightos 与原油期货接口，输入目标港口即可一键测算 CIF 成本并下载正规盖章 PI 形式发票草案；
-3. **3D 钢桶与包装在线定制打样器**：基于 Three.js 实现 208L 钢桶 360 度自由旋转、烤漆换色、客户 Logo 在线贴图预览；
-4. **AI 润滑专家与即时询盘 Agent**：基于福斯知识库，秒级解答各类机床设备原厂油品替代与参数匹配；
-5. **Cloudflare Workers 边缘计算与 PWA**：全球边缘节点 50ms 极速呈现，支持手机离线查阅技术参数。
+1. **实时海运费与原油指数联动 API**：对接海运集装箱即时运价，在线一键生成透明的 CIF/FOB 测算报告并导出正式 PI 发票草案；
+2. **3D 钢桶在线定制打样器**：基于 Three.js/WebGL 实现 208L 钢桶 360 度自由旋转、桶身烤漆换色、客户 Logo 在线贴牌预览；
+3. **AI 润滑专家与即时选油 Agent**：挂载机床工程润滑手册，在右下角悬浮窗秒级解答各类机床设备原厂油品替代与参数匹配；
+4. **Cloudflare Workers 边缘计算与 PWA**：全球边缘节点 50ms 极速响应，支持手机离线查阅技术参数与检验报告。
 
 > 详细演进方案见：[`references/future-optimization-roadmap.md`](references/future-optimization-roadmap.md)
 
@@ -242,12 +280,13 @@ flowchart LR
 
 | 脚本路径 | 核心功能 | 运行示例 |
 | :--- | :--- | :--- |
+| `scripts/build_multilingual_matrix.py` | 编译 5 大国际语种（ES/RU/AR/VI/ID）子目录与 Sitemap | `python3 scripts/build_multilingual_matrix.py` |
 | `scripts/generate_daily_news.py` | 编译 21 篇深度研报、生成无后缀页面与更新 Sitemap | `python3 scripts/generate_daily_news.py` |
-| `scripts/validate_site.py` | 6 维静态网站完整性校验（链接、Schema、Sitemap、Robots） | `python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com` |
+| `scripts/validate_site.py` | 6 维静态网站完整性校验（测试 70 个页面与 4889 个内部引用） | `python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com` |
 | `scripts/deploy_production.sh` | 自动化 Rsync 增量部署、权限复原与 Nginx 重载 | `bash scripts/deploy_production.sh` |
 | `scripts/apply_interactive_enhancements.py` | 自动注入数字滚动、向心聚拢动效与 Lightbox 组件 | `python3 scripts/apply_interactive_enhancements.py` |
 
 ---
 
 ## 📄 许可与产权 (License)
-本项目遵守 MIT 开源协议。所有工程标准、设计模式及自动化脚本均可供 B2B 出海企业自由使用与二次扩展。
+本项目遵守 [MIT License](LICENSE)。所有工程标准、设计模式及自动化脚本均可供 B2B 出海企业自由使用与二次扩展。

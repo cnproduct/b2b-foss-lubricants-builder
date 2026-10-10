@@ -7,6 +7,7 @@
   "commands": {
     "generate-news": "python3 scripts/generate_daily_news.py",
     "validate": "python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com",
+    "multilingual": "python3 scripts/build_multilingual_matrix.py",
     "deploy": "bash scripts/deploy_production.sh",
     "interactivity": "python3 scripts/apply_interactive_enhancements.py"
   },
