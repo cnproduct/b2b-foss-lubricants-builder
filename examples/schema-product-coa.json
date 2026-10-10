@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.fosslubricants.com/#organization",
+      "name": "Quanzhou Foss Lubrication Technology Co., Ltd",
+      "alternateName": ["FOSS LUBRICATION", "福斯润滑", "Foss Lubricants"],
+      "url": "https://www.fosslubricants.com/",
+      "logo": "https://www.fosslubricants.com/assets/images/logo.png",
+      "foundingDate": "2018-02-23",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Blended Industrial Zone",
+        "addressLocality": "Quanzhou",
+        "addressRegion": "Fujian",
+        "postalCode": "362000",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+86-159-5954-3210",
+        "contactType": "sales",
+        "email": "sales@fosslubricants.com",
+        "availableLanguage": ["English", "Chinese", "Spanish", "Russian"]
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.fosslubricants.com/hydraulic-oil#l-hm-46",
+      "name": "FOSS L-HM 46 Anti-Wear Industrial Hydraulic Oil (DIN 51524-2 HLP)",
+      "description": "Virgin Group II hydrocracked base oil formulated with premium zinc dialkyldithiophosphate (ZDDP) anti-wear additive chemistry. Meets DIN 51524 Part 2 HLP, ISO 11158 HM, and Parker Denison HF-0 in UN-certified 208L steel drums.",
+      "brand": {
+        "@type": "Brand",
+        "name": "FOSS LUBRICATION"
+      },
+      "manufacturer": {
+        "@id": "https://www.fosslubricants.com/#organization"
+      },
+      "sku": "FOSS-LHM-46-208L",
+      "mpn": "L-HM46-DRUM208",
+      "category": "Industrial Hydraulic Fluid",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "285.00",
+        "highPrice": "345.00",
+        "offerCount": "80",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://www.fosslubricants.com/#organization"
+        }
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Kinematic Viscosity at 40°C (ASTM D445)",
+          "value": "46.2 mm²/s"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Viscosity Index (ASTM D2270)",
+          "value": "104"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Flash Point COC (ASTM D92)",
+          "value": "232°C"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Pour Point (ASTM D97)",
+          "value": "-18°C"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Air Release at 50°C (ASTM D3427)",
+          "value": "4.2 min"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Water Separability at 54°C (ASTM D1401)",
+          "value": "40-40-0 (12 min)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "FZG Gear Scuffing Test (DIN 51354-2)",
+          "value": "Failure Load Stage 11"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Packaging Standard",
+          "value": "UN 1A1 Heavy Steel Drum, 208 Liters (182 kg net)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "20GP Container Capacity",
+          "value": "80 Drums palletized (16,640 Liters)"
+        }
+      ]
+    }
+  ]
+}
