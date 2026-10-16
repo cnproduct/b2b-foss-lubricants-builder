@@ -255,19 +255,64 @@ B2B 买家在采购大宗工业润滑油时高度关注原料走势。本项目�
 
 ---
 
-## 第十二阶段：未来持续演进路线图 (Future Optimization Roadmap)
+## 第十二阶段：Yandex SEO 与中亚（俄罗斯/哈萨克斯坦/乌兹别克斯坦）GEO 深度优化 (Yandex SEO & Central Asia GEO)
 
-随着多语言国际化矩阵正式落地，下一阶段的核心演进目标聚焦在**动态数据交互与智能化获客**：
+针对俄罗斯、哈萨克斯坦、乌兹别克斯坦等中亚与独联体（CIS/EAEU）国家，百度与 Google 的算法策略在此失效，**Yandex 搜索引擎（市场份额近 70%）与 Яндекс Нейро / Алиса AI（生成式 AI 搜索）是决定出海成败的核心阵地**。本阶段全量沉淀了对标 Yandex 最新算法规范的深度优化体系：
+
+### 1. Yandex 专属技术 SEO 与抓取通道 (Technical Hygiene)
+- **robots.txt 规范化**：
+  * 显式配置 `User-agent: Yandex`、`User-agent: YandexBot`、`User-agent: YandexDirect`、`User-agent: YandexMetrika`；
+  * 配置 Yandex 专有指令 `Clean-param: v /css/*` 及 `Clean-param: utm_source&...`，消除前端带参 URL 的权重稀释（单条规则 $\le 500$ 字符）；
+  * 坚决剔除已被 Yandex 正式废止的无效指令（`Host` 已于 2018 年废弃，改用 301 重定向；`Crawl-delay` 已于 2018 年废弃；Turbo Pages 已于 2025 年彻底关停）。
+- **IndexNow 协议极速推送**：
+  * 部署根目录密钥文件 `e4f8c2b19a0d4738a5e62f3c7b8d9e10.txt`；
+  * 提供 `scripts/yandex_indexnow_notify.py` 脚本，网页发布或更新后秒级向 `https://yandex.com/indexnow` 推送队列，实现 24 小时内极速抓取。
+- **站长工具与区域信号配置**：
+  * 全站预置 `<meta name="yandex-verification" content="f0551ubr1can75_ym_ver1fy">`；
+  * 配置 `og:locale` 为 `ru_RU`，并配置 `ru_KZ`（哈萨克斯坦）、`ru_UZ`（乌兹别克斯坦）、`ru_KG`、`ru_TJ` 等备用区域标记；
+  * 在 Schema.org `Corporation` / `LocalBusiness` 节点注入 `areaServed: ["RU", "KZ", "UZ", "KG", "TJ"]` 以及俄语 `ContactPoint`。
+
+### 2. Yandex GEO (Generative Engine Optimization) 知识工程
+- **生成式 AI 搜索（Яндекс Нейро / «Поиск с Алисой» / Алиса AI）**采用 RAG 架构抽取网页局部的高信噪比片段，而非通篇阅读：
+  * **三句话事实法则**：每个 H2/H3 问答块的前两句直接给出 марка、вязкость、ГОСТ、аналог Mobil/Shell，杜绝“空洞修饰词”；
+  * **结构化 Schema.org `FAQPage`**：全量采用俄语原生问答，直击总工程师（главный инженер）与采购总监的痛点；
+  * **机器知识库强化 (`/llms.txt` & `/llms-full.txt`)**：追加专门的 *«СНГ и Центральная Азия: РФ, Казахстан, Узбекистан»* 模块，锁定标准、铁路口岸与支付币种，确保 AI 推荐不产生幻觉。
+
+### 3. 独联体与中亚专属出海超级门户 (`/ru/cis-central-asia`)
+针对三大核心市场创建了专属高转化落地页，闭环了以下商业关键要素：
+- **三大国别专属场景**：
+  * 🇰🇿 **哈萨克斯坦 (Алматы, Астана, Шымкент, Атырау)**：针对露天煤矿、卡拉干达矿山、阿特劳油气设备，主推耐低温 **FOSS L-HV 46 (HVLP, застывание до -42°C, VI >= 152)** 与重载齿轮油 **FOSS L-CKD 220/320**；
+  * 🇺🇿 **乌兹别克斯坦 (Ташкент, Самарканд, Навои, Бухара)**：针对阿马雷克 (АГМК) 与纳沃伊 (НГМК) 冶金联合体、压铸机与纺织设备，主推 **FOSS 4631 HFC (огнестойкая водно-гликолевая жидкость)** 与 **FOSS L-HM 46**；
+  * 🇷🇺 **俄罗斯联邦 (Москва, Санкт-Петербург, Урал, Сибирь)**：针对重型数控机床、螺杆空压机与橡塑机械，主推 **FOSS L-DAH 46 (6000 ч)** 与 **FOSS L-HG 68**。
+- **中欧班列与铁路集装箱通道**：
+  * 经由中哈霍尔果斯 (Khorgos) 与阿拉山口 / 多斯特克 (Dostyk) 口岸，直达阿拉木图（10–14 天）与塔什干丘库尔赛/谢尔盖利站（12–16 天）；
+  * 单个 20 尺集装箱标载 **80 桶 208L 钢桶（16 640 升，毛重约 15.8 吨）**，完美契合公路铁路轴荷限制。
+- **欧亚经济联盟准入与技术标准**：
+  * 符合 **ТР ТС 030/2012**（ЕАС 声明）、原产地证（Форма СТ-1）、全俄语批次化验单 (COA) 与安全说明书 (MSDS/ПБХВ)；
+  * 完整的 **ГОСТ ↔ DIN ↔ ISO ↔ Mobil / Shell / Лукойл / ГПН** 1:1 替代对照表。
+- **跨境人民币与非 SWIFT 结算**：
+  * 支持中资银行 **CNY (人民币)** 跨境直清与 **RUB (卢布)** 结算，完全规避西方二级制裁与外汇冻结风险。
+- **全渠道即时沟通**：
+  * 在全站浮动客服中集成 **Telegram** (`@foss_lubricants_cis`)——俄语区与中亚商务第一社交工具，协同 WhatsApp 与 WeChat。
+
+> 深度参考：[`references/yandex-seo-geo-cis-mastery.md`](references/yandex-seo-geo-cis-mastery.md) 与 [`references/gost-din-iso-lubricants-matrix.md`](references/gost-din-iso-lubricants-matrix.md)。
+
+---
+
+## 第十三阶段：未来持续演进路线图 (Future Optimization Roadmap)
+
+随着多语言国际化矩阵与中亚 Yandex SEO/GEO 深度优化正式落地，下一阶段的核心演进目标聚焦在**动态数据交互与智能化获客**：
 
 ```mermaid
 flowchart LR
-    M1[已完成: 多语言矩阵<br>西语/俄语/阿语/越语/印尼语] --> M2[阶段二: 实时海运费与原油 API<br>在线生成 FOB/CIF 报价单与 PI]
+    M1[已完成: 多语言矩阵<br>西语/俄语/阿语/越语/印尼语] --> M15[已完成: Yandex SEO & GEO<br>俄/哈/乌中亚铁路集装箱专属门户]
+    M15 --> M2[阶段二: 实时海运与铁路运费 API<br>在线生成 FOB/CIF/DAP 报价单与 PI]
     M2 --> M3[阶段三: 3D 钢桶在线定制打样器<br>WebGL 自由换色/贴牌/旋转]
     M3 --> M4[阶段四: AI 润滑专家选油与秒回 Agent<br>挂载机械手册秒级回答工况选油]
     M4 --> M5[阶段五: Cloudflare Workers 边缘计算<br>与 PWA 离线规格书工作站]
 ```
 
-1. **实时海运费与原油指数联动 API**：对接海运集装箱即时运价，在线一键生成透明的 CIF/FOB 测算报告并导出正式 PI 发票草案；
+1. **实时海运与铁路运费联动 API**：对接海运及中欧班列即时运价，在线一键生成透明的 CIF/DAP 测算报告并导出正式 PI 发票草案；
 2. **3D 钢桶在线定制打样器**：基于 Three.js/WebGL 实现 208L 钢桶 360 度自由旋转、桶身烤漆换色、客户 Logo 在线贴牌预览；
 3. **AI 润滑专家与即时选油 Agent**：挂载机床工程润滑手册，在右下角悬浮窗秒级解答各类机床设备原厂油品替代与参数匹配；
 4. **Cloudflare Workers 边缘计算与 PWA**：全球边缘节点 50ms 极速响应，支持手机离线查阅技术参数与检验报告。
@@ -280,9 +325,11 @@ flowchart LR
 
 | 脚本路径 | 核心功能 | 运行示例 |
 | :--- | :--- | :--- |
+| `scripts/build_cis_yandex_optimization.py` | 编译中亚/独联体专属门户、注入 Yandex 验证与导航链接 | `python3 scripts/build_cis_yandex_optimization.py` |
+| `scripts/yandex_indexnow_notify.py` | 向 Yandex IndexNow API 秒级推送更新与新发 URL | `python3 scripts/yandex_indexnow_notify.py` |
 | `scripts/build_multilingual_matrix.py` | 编译 5 大国际语种（ES/RU/AR/VI/ID）子目录与 Sitemap | `python3 scripts/build_multilingual_matrix.py` |
 | `scripts/generate_daily_news.py` | 编译 21 篇深度研报、生成无后缀页面与更新 Sitemap | `python3 scripts/generate_daily_news.py` |
-| `scripts/validate_site.py` | 6 维静态网站完整性校验（测试 70 个页面与 4889 个内部引用） | `python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com` |
+| `scripts/validate_site.py` | 6 维静态网站完整性校验（测试 77 个页面与 5232 个内部引用） | `python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com` |
 | `scripts/deploy_production.sh` | 自动化 Rsync 增量部署、权限复原与 Nginx 重载 | `bash scripts/deploy_production.sh` |
 | `scripts/apply_interactive_enhancements.py` | 自动注入数字滚动、向心聚拢动效与 Lightbox 组件 | `python3 scripts/apply_interactive_enhancements.py` |
 

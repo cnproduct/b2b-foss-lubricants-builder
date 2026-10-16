@@ -1,13 +1,15 @@
 {
   "name": "b2b-foss-lubricants-builder",
-  "version": "1.0.0",
-  "description": "Quanzhou Foss Lubrication Technology Co., Ltd (fosslubricants.com) 全生命周期高端工业润滑油与液压油 B2B 出海独立站构建、全球标杆排查对标、ASTM/DIN/ISO 严苛工业指标硬锚定、208L 钢桶装箱测算引擎、自动化 3000 字每日能源与走势深度研报引擎、侧边悬浮极速多渠道沟通窗口、Imagen 3 中国团队与中英双轨品牌生图规范、无后缀 URL 清爽路由与高转化工程建站 Skill。",
+  "version": "1.2.0",
+  "description": "Quanzhou Foss Lubrication Technology Co., Ltd (fosslubricants.com) 全生命周期高端工业润滑油与液压油 B2B 出海独立站构建、全球标杆排查对标、ASTM/DIN/ISO 严苛工业指标硬锚定、208L 钢桶装箱测算引擎、自动化 3000 字每日能源与走势深度研报引擎、侧边悬浮极速多渠道沟通窗口、Imagen 3 中国团队与中英双轨品牌生图规范、无后缀 URL 清爽路由与高转化工程建站，以及针对 Yandex 搜索引擎（俄罗斯、哈萨克斯坦、乌兹别克斯坦等中亚与独联体 EAEU）专属 SEO 与 Яндекс Нейро / Алиса AI 生成式引擎优化 (GEO) 的全链路综合 Skill。",
   "author": "cnproduct",
   "entrypoint": "SKILL.md",
   "commands": {
     "generate-news": "python3 scripts/generate_daily_news.py",
     "validate": "python3 scripts/validate_site.py . --release --domain https://www.fosslubricants.com",
     "multilingual": "python3 scripts/build_multilingual_matrix.py",
+    "cis-yandex": "python3 scripts/build_cis_yandex_optimization.py",
+    "indexnow": "python3 scripts/yandex_indexnow_notify.py",
     "deploy": "bash scripts/deploy_production.sh",
     "interactivity": "python3 scripts/apply_interactive_enhancements.py"
   },
@@ -18,9 +20,14 @@
     "steel-drums-208l",
     "astm-d445",
     "din-51524",
+    "gost-17479",
     "daily-energy-reports",
     "clean-urls",
     "antigravity-skill",
-    "geo-seo"
+    "geo-seo",
+    "yandex-seo",
+    "yandex-geo",
+    "cis-central-asia",
+    "eaeu-tr-cu-030"
   ]
 }

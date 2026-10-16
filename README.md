@@ -51,6 +51,13 @@
 10. **云端生产部署与 CDN 缓存穿透策略**：
     - 自动化 Rsync 增量推送、自动权限复位（`www-data:www-data 755`）与 Nginx 平滑重载；
     - 图片资源附加版本号 `?v=20261010_v11`，彻底击穿 Cloudflare 30 天静态边缘缓存。
+11. **Yandex SEO 与中亚（俄罗斯/哈萨克斯坦/乌兹别克斯坦）GEO 深度优化体系**：
+    - 专为俄语区（市场份额近 70% 的 Yandex 搜索引擎）与 **Яндекс Нейро / Алиса AI** 生成式搜索深度定制；
+    - **独联体与中亚专属出海超级门户 (`/ru/cis-central-asia`)**：针对哈萨克斯坦（矿业油气/抗低温 HVLP 46）、乌兹别克斯坦（冶金抗燃 HFC 4631 / 注塑机 HLP 46）、俄罗斯（数控机床与重载齿轮油 CKD 220/320）三大核心市场打造高转化落地页；
+    - **中欧班列与铁路集装箱通道**：经霍尔果斯与阿拉山口/多斯特克口岸 10–14 天直达阿拉木图与塔什干，单柜 80 桶 208L（16,640 升 / 15.8 吨）；
+    - **准入与标准对齐**：欧亚经济联盟 **ТР ТС 030/2012** 合规申报、Form ST-1 原产地证、全俄文 COA/MSDS 与完整的 **ГОСТ ↔ DIN ↔ ISO ↔ Mobil / Shell / Лукойл / ГПН** 1:1 替代矩阵；
+    - **跨境人民币与非 SWIFT 结算**：支持中资银行 CNY 直清与 RUB 结算，彻底防范国际汇款冻结风险；
+    - **全渠道沟通与 IndexNow 秒级收录**：全站客服集成 **Telegram** (`@foss_lubricants_cis`)，部署 IndexNow 协议自动推送 Yandex 索引库。
 
 ---
 
@@ -81,7 +88,9 @@ b2b-foss-lubricants-builder/
 ├── manifest.json                            # Skill 元数据与命令行配置
 ├── LICENSE                                  # MIT 开源许可证
 ├── .gitignore                               # Git 忽略配置
-├── references/                              # 11 大核心深度方法论与设计规范
+├── references/                              # 13 大核心深度方法论与设计规范
+│   ├── yandex-seo-geo-cis-mastery.md        # Yandex SEO 与中亚 (俄/哈/乌) GEO 深度优化全景实操指南
+│   ├── gost-din-iso-lubricants-matrix.md    # ГОСТ vs DIN vs ISO 摩擦学标准与 1:1 替代对照全量矩阵
 │   ├── b2b-skills-orchestration-guide.md    # 外贸建站 Skills 协同使用全景指南与实战手册
 │   ├── tribology-multilingual-dictionary.md # 6 语种专业摩擦学与润滑工程权威词库 (防幻觉)
 │   ├── benchmark-analysis-and-positioning.md# 巨头对标分析与差异化公式
@@ -94,6 +103,8 @@ b2b-foss-lubricants-builder/
 │   ├── email-delivery-and-cloudflare-setup.md # 表单 100% 投递、SPF/DKIM 与 Turnstile 配置
 │   └── future-optimization-roadmap.md       # 五大未来演进路线图 (海运费API/3D换色等)
 ├── scripts/                                 # 核心自动化与运维脚本
+│   ├── build_cis_yandex_optimization.py     # 中亚/独联体门户、Yandex 验证与导航自动化生成器
+│   ├── yandex_indexnow_notify.py            # Yandex IndexNow 协议秒级推送脚本
 │   ├── build_multilingual_matrix.py         # 多语言国际化矩阵与 Sitemap 自动编译器
 │   ├── generate_daily_news.py               # 每日深度研报自动化编译生成器
 │   ├── news_database.py                     # 20 篇高深度行业开篇分析数据库
